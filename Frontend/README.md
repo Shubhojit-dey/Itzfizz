@@ -1,16 +1,96 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Itzfizz Scroll-Driven Hero Animation
 
-Currently, two official plugins are available:
+## 🚀 Overview
+A premium scroll-driven hero section built for Itzfizz Digital's web development internship assignment.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
+- Smooth initial load animations with staggered reveal
+- Animated statistics with counter effects
+- Scroll-based visual movement tied to scroll progress
+- Mouse parallax interaction
+- Performance optimized with transform properties
+- Fully responsive design
+- Premium motion quality with GSAP
 
-## React Compiler
+## 🛠️ Technologies Used
+- React.js
+- GSAP (ScrollTrigger)
+- CSS3 with modern animations
+- Tailwind CSS (optional)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📦 Installation
 
-## Expanding the ESLint configuration
+1. Clone the repository:
+\`\`\`bash
+git clone https://github.com/your-username/scroll-hero-animation.git
+\`\`\`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. Install dependencies:
+\`\`\`bash
+cd scroll-hero-animation
+npm install
+\`\`\`
+
+3. Start development server:
+\`\`\`bash
+npm run dev
+\`\`\`
+
+## 🌐 Live Demo
+[View Live Demo](https://your-username.github.io/scroll-hero-animation)
+
+## 📁 Project Structure
+\`\`\`
+src/
+├── assets/
+│   └── car.jpg
+├── Landing_Page/
+│   ├── Hero.jsx
+│   └── Hero.css
+├── App.jsx
+├── App.css
+├── index.css
+└── main.jsx
+\`\`\`
+
+## 🎯 Key Features Implemented
+
+### Initial Load Animation
+- Headline letters stagger in with fade + vertical movement
+- Statistics animate sequentially with scale effect
+
+### Scroll-Based Animation
+- Visual element transforms with scroll progress
+- Smooth easing with scrub effect
+- Rotation and scale for dynamic feel
+
+### Interactive Elements
+- Mouse move parallax effect
+- Animated floating code elements
+- Particle background system
+
+## 📱 Responsive Design
+- Mobile-first approach
+- Adaptive layouts for all screen sizes
+- Touch-friendly interactions
+
+## ⚡ Performance Optimizations
+- Transform-based animations
+- GPU acceleration with will-change
+- Throttled event listeners
+- Reduced motion support
+
+## 🤝 Contributing
+Pull requests are welcome. For major changes, please open an issue first.
+
+## 📄 License
+MIT
+
+## 👨‍💻 Author
+Your Name
+
+## 🙏 Acknowledgments
+- Itzfizz Digital for the internship opportunity
+- GSAP for amazing animation library
+EOF
