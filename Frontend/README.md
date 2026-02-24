@@ -84,11 +84,8 @@ src/
 ## 🤝 Contributing
 Pull requests are welcome. For major changes, please open an issue first.
 
-## 📄 License
-MIT
-
 ## 👨‍💻 Author
-Your Name
+Shubhojit Dey
 
 ## 🙏 Acknowledgments
 - Itzfizz Digital for the internship opportunity
