@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background: #0b0b0b;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Remove the .hero styles from here since they're in Hero.css */
