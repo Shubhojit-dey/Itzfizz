@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, forwardRef } from "react"; // Added forwardRef
+import { useEffect, useRef, useState, forwardRef } from "react"; 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import car from "../assets/car.jpg";
@@ -15,17 +15,17 @@ export default function Hero() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
-    // Check if refs are available
+    
     if (!headlineRef.current.length || !statsRef.current.length) return;
 
     const ctx = gsap.context(() => {
-      // Initial state
+      
       gsap.set([headlineRef.current, statsRef.current], {
         opacity: 0,
         y: 50
       });
 
-      // Headline stagger animation
+      
       gsap.to(headlineRef.current, {
         opacity: 1,
         y: 0,
@@ -35,7 +35,7 @@ export default function Hero() {
         delay: 0.3
       });
 
-      // Stats animation
+      
       gsap.to(statsRef.current, {
         opacity: 1,
         y: 0,
@@ -45,7 +45,7 @@ export default function Hero() {
         delay: 0.8
       });
 
-      // Scroll-based animation
+     
       if (imageRef.current) {
         gsap.to(imageRef.current, {
           scale: 1.2,
@@ -62,7 +62,7 @@ export default function Hero() {
         });
       }
 
-      // Overlay gradient animation
+      
       if (overlayRef.current) {
         gsap.to(overlayRef.current, {
           background: "linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(59,130,246,0.3) 100%)",
@@ -75,7 +75,7 @@ export default function Hero() {
         });
       }
 
-      // Parallax effect for headline
+     
       gsap.to(headlineRef.current, {
         y: -100,
         opacity: 0.5,
@@ -91,7 +91,7 @@ export default function Hero() {
     return () => ctx.revert();
   }, []);
 
-  // Mouse move parallax effect
+  
   useEffect(() => {
     const handleMouseMove = (e) => {
       if (!imageRef.current) return;
@@ -105,7 +105,7 @@ export default function Hero() {
         
         setMousePosition({ x, y });
         
-        // Subtle image movement on mouse move
+        
         gsap.to(imageRef.current, {
           x: x * 2,
           y: y * 2,
@@ -123,10 +123,10 @@ export default function Hero() {
 
   return (
     <section className="hero" ref={heroRef}>
-      {/* Animated gradient overlay */}
+      {}
       <div className="hero-overlay" ref={overlayRef}></div>
       
-      {/* Animated background particles */}
+      {}
       <div className="hero-particles">
         {[...Array(20)].map((_, i) => (
           <div
@@ -142,15 +142,15 @@ export default function Hero() {
         ))}
       </div>
 
-      {/* Main content */}
+      {}
       <div className="hero-content">
-        {/* Animated badge */}
+        {}
         <div className="hero-badge">
           <span className="badge-dot"></span>
           ITZFIZZ DIGITAL
         </div>
 
-        {/* Headline with letter spacing */}
+        {}
         <h1 className="hero-headline">
           {headline.map((char, i) => (
             <span
@@ -164,12 +164,12 @@ export default function Hero() {
           ))}
         </h1>
 
-        {/* Subheadline */}
+        {}
         <p className="hero-subheadline">
           Crafting digital experiences that drive results
         </p>
 
-        {/* Statistics */}
+        {}
         <div className="stats-container">
           <Stat
             value="98%"
@@ -191,7 +191,7 @@ export default function Hero() {
           />
         </div>
 
-        {/* CTA Buttons */}
+        {}
         <div className="cta-container">
           <button className="cta-primary">
             Get Started
@@ -209,7 +209,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Visual element with mouse position influence */}
+      {}
       <div 
         className="hero-visual-wrapper"
         style={{
@@ -224,7 +224,7 @@ export default function Hero() {
           className="hero-visual"
         />
         
-        {/* Floating elements */}
+        {}
         <div className="floating-elements">
           <div className="floating-element html">
             <span>&lt;/&gt;</span>
@@ -238,7 +238,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
+      {}
       <div className="scroll-indicator">
         <span className="scroll-text">Scroll to explore</span>
         <div className="scroll-line"></div>
@@ -247,12 +247,12 @@ export default function Hero() {
   );
 }
 
-// Enhanced Stat component - Fixed with proper forwardRef
+
 const Stat = forwardRef(({ value, label, icon }, ref) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    // Animated counter
+   
     const numericValue = parseInt(value) || 0;
     if (numericValue === 0) return;
     
